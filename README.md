@@ -1,11 +1,23 @@
-# ClodeX : publications
+# ClodeX · Publications
 
-Ce dépôt ne contient que les versions publiées de ClodeX pour Windows x64 (onglet **Releases**). Le code est dans un dépôt séparé.
+Ce dépôt distribue les versions de ClodeX pour Windows et Linux x64. Le code source est maintenu dans un dépôt séparé.
 
-L'installateur n'est pas signé : Windows peut afficher un avertissement SmartScreen. Avant de l'installer, compare son empreinte SHA-256 à celle indiquée dans les notes de la version :
+[Dernière version stable](https://github.com/KevinPiriou/ClodeX---Releases/releases/latest) · [ClodeX 0.3.6](https://github.com/KevinPiriou/ClodeX---Releases/releases/tag/v0.3.6)
+
+## Windows x64
+
+Télécharge l’installateur et son fichier `.sha256` dans la release. L’installateur est distribué sans signature. Windows peut afficher un avertissement SmartScreen.
 
 ```powershell
-Get-FileHash .\ClodeX-Setup-0.1.0-x64.exe -Algorithm SHA256
+Get-FileHash .\ClodeX-Setup-0.3.6-x64.exe -Algorithm SHA256
 ```
 
-Désinstaller ClodeX conserve le dossier de données.
+Compare le résultat à l’empreinte fournie. La désinstallation conserve le dossier de données.
+
+## Linux x64
+
+Télécharge le ZIP et son fichier `.sha256`, compare l’empreinte, puis extrais l’archive sur Linux. Lance `./linux-unpacked/clodex` depuis une session graphique.
+
+```sh
+sha256sum ClodeX-0.3.6-linux-x64.zip
+```
